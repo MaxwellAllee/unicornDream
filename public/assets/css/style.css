@@ -1,0 +1,116 @@
+html body {
+    height: 100vh;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.main{
+    background-image: url('/assets/images/back.jpg');
+    flex:auto;
+    background-position: center bottom;
+    display: flex;
+    flex-direction: column;
+}
+.secondRow{
+    display: flex;
+    margin-top: 5%;
+    height: 40%;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.textArea{
+    background-color: blueviolet;
+    width: 40%;
+}
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    display:inline-block; 
+    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    margin: .5%;
+}
+footer{
+    color: white;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer>p{
+    margin:0px ;
+}
+textarea{
+    margin: 2%;
+
+    width: 95%;
+    height: 80%;
+    resize: none;
+}
+.textButton{
+    display: flex;
+    justify-content: flex-end;
+}
+button{
+    background-color: rgb(243, 0, 162);
+    border-width: 0px;
+    border-radius: 4px;
+    margin-right: 2%;
+    color: white;
+}
+#save:disabled{
+    opacity: 50%;
+}
+.previous{
+    flex: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 1%
+}
+.card{
+    grid-column: auto;
+    border-radius: 4px;
+    background-color: white;
+    padding: 1%;
+    height: 25%;
+}
+@media only screen and (max-width: 900px) {
+    .previous{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .textArea{
+        width: 75%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .previous{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .textArea{
+        width: 90%;
+    }
+    .card{
+
+        height: 60%;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .previous{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .textArea{
+        width: 90%;
+    }
+   
+  }
